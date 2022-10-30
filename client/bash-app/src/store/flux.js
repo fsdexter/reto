@@ -3,13 +3,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			message: "tentativa 1",
 			computers:[
-				{name:"computer1", path:"dir1"},
-				{name:"computer2", path:"dir2"},
-				{name:"computer3", path:"dir3"},
-				{name:"computer4", path:"dir4"},
-				{name:"computer5", path:"dir5"},
-				{name:"computer6", path:"dir6"},
-			]
+				{id:"1",name:"computer1", path:"dir1"},
+				{id:"2",name:"computer2", path:"dir2"},
+				{id:"3",name:"computer3", path:"dir3"},
+				{id:"4",name:"computer4", path:"dir4"},
+				{id:"5",name:"computer5", path:"dir5"},
+				{id:"6",name:"computer6", path:"dir6"},
+			],
+			spot:{}
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -42,6 +43,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			access:(id) =>{
+				const store = getStore();
+
+				let aux = store.computers.filter(elm => elm.id === id)
+
+				setStore({ spot: aux });
 			}
 		}
 	};

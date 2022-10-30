@@ -11,6 +11,7 @@ export const Box = () => {
 		return(
 			<div className="" key={index} >
 				<ComputerCard 
+				id={item.id}
                 name={item.name}
                 path={item.path}
                 />

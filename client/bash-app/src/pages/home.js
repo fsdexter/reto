@@ -2,7 +2,8 @@ import React from "react";
 import {useState, useEffect, useContext}  from 'react';
 import { Box } from "../componetn/computerBox";
 import { Context } from "../store/appContext"
-import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
+
 
 export const Home = () => {
 	const { store} = useContext(Context);
@@ -13,7 +14,9 @@ export const Home = () => {
     return (
         <div className="container">
             <Box/>
-            <Button variant="secondary">Secondary</Button>
+            <Link to="/add">
+				<button className="btn btn-success">Add Computer</button>
+			</Link>
         </div>
       )
 }
