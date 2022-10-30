@@ -2,6 +2,7 @@ import React from "react";
 import {useState, useEffect, useContext}  from 'react';
 import { Context } from "../store/appContext"
 import { Test } from "../componetn/test";
+import ComputerCard from "../componetn/computer";
 
 export const Home = () => {
 	const { store} = useContext(Context);
@@ -25,10 +26,14 @@ export const Home = () => {
     }, [])
 
     return (
-        <>
-            <h1>ALIVE</h1>
-            <Test data={data}/>
-            <p>{store.message }</p>
-        </>
+        <div className="container">
+            <ComputerCard/>
+        </div>
       )
 }
+
+        <>
+            {/* <h1>ALIVE</h1>
+            <Test data={data}/>
+            <p>{store.message }</p> */}
+        </>
