@@ -2,7 +2,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			message: "tentativa 1",
-			computers:[]
+			computers:[
+				{name:"computer1", path:"dir1"},
+				{name:"computer2", path:"dir2"},
+				{name:"computer3", path:"dir3"},
+				{name:"computer4", path:"dir4"},
+				{name:"computer5", path:"dir5"},
+				{name:"computer6", path:"dir6"},
+			]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction

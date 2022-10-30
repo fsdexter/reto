@@ -1,33 +1,19 @@
 import React from "react";
 import {useState, useEffect, useContext}  from 'react';
+import { Box } from "../componetn/computerBox";
 import { Context } from "../store/appContext"
-import { Test } from "../componetn/test";
-import ComputerCard from "../componetn/computer";
+import Button from 'react-bootstrap/Button';
 
 export const Home = () => {
 	const { store} = useContext(Context);
 
 
-    const [data, setData] = useState([])
-    const url = "http://127.0.0.1:80/"
-    // http://127.0.0.1:80
-    //  "proxy":"http://server:5000",
-  
-    useEffect(() => {
-        fetch(url).then(responses => {
-        if (responses.status === 200) {
-                console.log(responses)
-                return responses.json();
-        }
-    }).then(data => {
-        console.log(data);
-        setData(data);
-    })
-    }, [])
+    
 
     return (
         <div className="container">
-            <ComputerCard/>
+            <Box/>
+            <Button variant="secondary">Secondary</Button>
         </div>
       )
 }

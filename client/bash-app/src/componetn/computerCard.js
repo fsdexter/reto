@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 import PcIcon from "../img/pc_icon.png"
 
 
-function ComputerCard() {
+function ComputerCard(props) {
   const { store, actions } = useContext(Context);
 
 
@@ -13,9 +13,9 @@ function ComputerCard() {
     <Card >
       <Card.Img variant="top" src={PcIcon} alt="computer icon" style={{ width: '100px', }}/>
       <Card.Body>
-        <Card.Title>TEST</Card.Title>
+        <Card.Title>{props.name}</Card.Title>
         <Card.Text>
-          TEST
+          {props.path}
         </Card.Text>
         <Button variant="primary">TEST</Button>
       </Card.Body>
