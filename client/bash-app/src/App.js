@@ -7,17 +7,16 @@ import { Home } from './pages/home';
 function App() {
 
   return (
-    
+
     <div className="App">
+
       <BrowserRouter >
-                
-                    <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<h1>Not found!</h1>} />
-                    </Routes>
-                  
-            </BrowserRouter>
-      
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<h1>Not found!</h1>} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
