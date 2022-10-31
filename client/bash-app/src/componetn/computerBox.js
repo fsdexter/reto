@@ -12,6 +12,7 @@ export const Box = () => {
 			<div className="" key={index} >
 				<ComputerCard 
 				id={item.id}
+				index={index}
                 name={item.name}
                 path={item.path}
                 />

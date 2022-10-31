@@ -23,7 +23,7 @@ function ComputerCard(props) {
             type="button"
             className="btn btn-warning"
             onClick={() => {
-              actions.access(props.id);
+              actions.access(props.id, props.index);
               navigate("/access")
             }}
           >Access</button>
